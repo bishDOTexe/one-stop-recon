@@ -11,6 +11,7 @@ RESET="\033[0m"
 info_path=$domain/info
 subdomain_path=$domain/subdomains
 screenshot_path=$domain/screenshots
+subdirectory_path=$domain/subdirectories
 
 #if a directory named 'domain' (from argument 1) doesn't exist, make the folder in working dir
 if [ ! -d "$domain" ];then
@@ -25,6 +26,11 @@ fi
 #creates 'domain/subdomains' folder if it doesn't already exist in directory 'domain/'
 if [ ! -d "$subdomain_path" ];then
 	mkdir $subdomain_path
+fi
+
+#creates 'domain/subdirectories' folder if it doesn't already exist in directory 'domain/'
+if [ ! -d "$subdirectory_path" ];then
+	mkdir $subdirectory_path
 fi
 
 #creates 'domain/screenshots' folder if it doesn't already exist in directory 'domain/'
