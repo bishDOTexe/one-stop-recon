@@ -9,4 +9,11 @@ Run script as root or with Super User privileges.
 
 ./OneStopRecon.sh (target)
 
-Note: (target) is in the format of a domain name, such as 'google.com'
+(target) is in the format of a domain name, such as 'google.com'
+
+<h2>Additional Comments</h2> 
+
+* This is a work-in-progress. Additional updates/changes are subject to author.
+* Script does not currently verify whether tools being used are currently installed 
+  * Tools currently in-use by script: 'whois', 'subfinder', 'assetfinder', 'gowitness'
+* Be sure to run script from location where you would like directories to be created as they are created in current working directory. 
