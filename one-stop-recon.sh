@@ -28,14 +28,14 @@ if [ ! -d "$subdomain_path" ];then
 	mkdir $subdomain_path
 fi
 
-#creates 'domain/subdirectories' folder if it doesn't already exist in directory 'domain/'
-if [ ! -d "$subdirectory_path" ];then
-	mkdir $subdirectory_path
-fi
-
 #creates 'domain/screenshots' folder if it doesn't already exist in directory 'domain/'
 if [ ! -d "$screenshot_path" ];then
 	mkdir $screenshot_path
+fi
+
+#creates 'domain/subdirectories' folder if it doesn't already exist in directory 'domain/'
+if [ ! -d "$subdirectory_path" ];then
+	mkdir $subdirectory_path
 fi
 
 # adds color and echo to show verbosity on status of script
