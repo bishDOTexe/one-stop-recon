@@ -52,6 +52,9 @@ subfinder -d $domain > $subdomain_path/found.txt
 echo -e "${RED} [+] Running 'assetfinder' check ... ${RESET}"
 assetfinder $domain | grep $domain >> $subdomain_path/found.txt
 
+echo -e "${RED} [+] Running GoBuster check ... ${RESET}"
+gobuster dir -u $domain -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt >> $subdirectory_path/found.txt
+
 # commented out as Amass run-time is rather slow. Can be un-commented as needed
 #echo -e "${RED} [+] Running 'Amass' check ... This could take a while... ${RESET}"
 #amass enum -d $domain >> $subdomain_path/found.txt
